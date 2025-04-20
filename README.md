@@ -1,4 +1,4 @@
-# ftb-oevolution
+# ftb-evolution
 FTB Evolution modpack
 made by Feed The Beast at https://feed-the-beast.com
 
