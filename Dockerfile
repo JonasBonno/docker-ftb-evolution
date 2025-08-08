@@ -15,10 +15,10 @@ WORKDIR /minecraft
 # Creating user and downloading files
 RUN useradd -m -U minecraft && \
 	mkdir -p /minecraft/world && \
-	wget --no-check-certificate https://api.feed-the-beast.com/v1/modpacks/public/modpack/125/100124/server/linux -O serverinstall_125_100124 && \
-	chmod u+x serverinstall_* && \
-	./serverinstall_* --auto -force && \
-	rm serverinstall_* && \
+	wget --no-check-certificate https://github.com/FTBTeam/FTB-Server-Installer/releases/download/latest/ftb-server-linux-amd64 -O serverinstaller && \
+	chmod u+x serverinstaller && \
+	./serverinstaller -auto -pack 125 -latest && \
+	rm serverinstaller && \
 	echo "#By changing the setting below to TRUE you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula)." > eula.txt && \
 	echo "$(date)" >> eula.txt && \
 	echo "eula=true" >> eula.txt && \
