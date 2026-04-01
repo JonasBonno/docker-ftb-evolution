@@ -15,7 +15,7 @@ WORKDIR /minecraft
 # Creating user and downloading files
 RUN useradd -m -U minecraft && \
 	mkdir -p /minecraft/world && \
-	wget --no-check-certificate https://api.feed-the-beast.com/v1/modpacks/public/modpack/125/100181/server/linux -O serverinstall_125_100181 && \
+	wget --no-check-certificate https://api.feed-the-beast.com/v1/modpacks/public/modpack/125/100248/server/linux -O serverinstall_125_100248 && \
 	chmod u+x serverinstall_* && \
 	./serverinstall_* --auto -force && \
 	rm serverinstall_* && \
